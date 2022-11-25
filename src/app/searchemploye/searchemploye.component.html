@@ -1,0 +1,66 @@
+<div class="main mt-5 pt-5">
+    <div class="container">
+      <div class="card text-start">
+        <div class="card-body form-card-body">
+            <h3 class="card-title text-bold fw-bold">EMPLOYEE</h3>
+            <!-- search employee table  -->
+            <!-- <table class="table table-striped mt-4">
+                <thead>
+                  <tr>
+                    <th>No.</th>
+                    <th >Name</th>
+                    <th >Mobile No.</th>
+                    <th>Course Name</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of employeedata">
+                    <th>{{item.fname}}</th>
+                    <th>{{item.lname}}</th>
+                    <th>{{item.email}}</th>
+                    <th>{{item.phone}}</th>
+                    <th>{{item.aadhar}}</th>
+                    <th>{{item.pan}}</th>
+                    <th>{{item.designation}}</th>
+                  </tr>
+                </tbody>
+            </table> -->
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">First Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Mobile number</th>
+                  <th scope="col">Aadhar number</th>
+                  <th scope="col">Pan number</th>
+                  <th scope="col">Designation</th>
+                  <th scope="col">Date of birth</th>
+                  <th scope="col">Material status</th>
+                  <th scope="col">Naionality</th>
+                  <th scope="col">Address</th>
+                  <th scope="col">city</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of employeedata">
+                  <th scope="row">1</th>
+                  <th>{{item.fname}}</th>
+                  <th>{{item.lname}}</th>
+                  <th>{{item.email}}</th>
+                  <th>{{item.phone}}</th>
+                  <th>{{item.aadhar}}</th>
+                  <th>{{item.pan}}</th>
+                  <th>{{item.designation}}</th>
+                  <th>{{item.dateofbirth}}</th>
+                  <th>{{item.materialstatus}}</th>
+                  <th>{{item.nationality}}</th>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+      </div>
+    </div>
+</div>

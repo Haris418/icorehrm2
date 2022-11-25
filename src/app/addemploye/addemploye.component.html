@@ -1,0 +1,268 @@
+
+<div class="main mt-5 pt-5">
+    <div class="container">
+      <div class="card text-start">
+        <div class="card-body form-card-body">
+            <h4 class="card-title text-bold fw-bold">EMPLOYEE</h4>
+            <form [formGroup]="form" (ngSubmit)="postEmployeeDetails()">   
+              <div class="basic-information">
+                <div class="row mb-4">
+                  <div class="basic-info-tile d-flex align-items-center ">
+                    <i class="bi bi-person-circle me-3 form-title-icon" ></i>
+                    <span class="form-title">Basic Info</span>
+                  </div>
+                </div>
+                <div class="row">
+                  <!-- first-name  -->
+                  <div class="col-lg-6 col-md-6">
+                    <div class="mb-4">
+                      <div class="form-group">
+                        <label for="name">Name</label>
+                        <input
+                            formControlName="fname"
+                            id="name"
+                            type="text"
+                            class="form-control">
+                        <div *ngIf="f['fname'].touched && f['fname'].invalid" class="alert alert-danger">
+                            <div *ngIf="f['fname'].errors && f['fname'].errors['required']">Name is required.</div>
+                
+                  
+                            <div *ngIf="f['fname'].errors && f['fname'].errors['minlength']">Name should be 3 character.</div>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+                  <!-- last-name  -->
+                  <div class="col-lg-6 col-md-6">
+                    <div class="mb-4">
+                      <div class="form-group">
+                        <label for="name">Last Name</label>
+                        <input
+                            formControlName="lname"
+                            id="name"
+                            type="text"
+                            class="form-control">
+                        <div *ngIf="f['lname'].touched && f['lname'].invalid" class="alert alert-danger">
+                            <div *ngIf="f['lname'].errors && f['lname'].errors['required']">Name is required.</div>          
+                            <div *ngIf="f['lname'].errors && f['lname'].errors['minlength']">Name should be 3 character.</div>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+                  <!-- email  -->
+                  <div class="col-lg-6 col-md-6">
+                    <div class="mb-4">
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                            <input
+                                formControlName="email"
+                                id="email"
+                                type="text"
+                                class="form-control">
+                            <div *ngIf="f['email'].touched && f['email'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['email'].errors && f['email'].errors['required']">Email is required.</div>
+                                <div *ngIf="f['email'].errors && f['email'].errors['email']">Please, enter valid email address.</div>
+                            </div>
+                      </div>  
+                    </div>
+                  </div>
+                  <!-- phone number  -->
+                  <div class="col-lg-6 col-md-6">
+                    <div class="mb-4">
+                      <div class="form-group">
+                        <label for="email">Mobile Number</label>
+                            <input
+                                formControlName="phone"
+                                id="phone"
+                                type="text"
+                                class="form-control">
+                            <div *ngIf="f['phone'].touched && f['phone'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['phone'].errors && f['phone'].errors['required']">Mobile number is required.</div>
+                                <div *ngIf="f['phone'].errors && f['phone'].errors['phone']">Please, enter mobile number</div>
+                            </div>
+                      </div>  
+                    </div>
+                  </div>
+                  <!-- Aadhar number  -->
+                  <div class="col-lg-6 col-md-6">
+                    <div class="mb-4">
+                      <div class="form-group">
+                        <label for="email">Aadhar Number</label>
+                            <input
+                                formControlName="aadhar"
+                                id="aadhar"
+                                type="text"
+                                class="form-control">
+                            <div *ngIf="f['aadhar'].touched && f['aadhar'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['aadhar'].errors && f['aadhar'].errors['required']">aadhar number is required.</div>
+                                <div *ngIf="f['aadhar'].errors && f['aadhar'].errors['aadhar']">Please, enter aadhar number</div>
+                            </div>
+                      </div>  
+                    </div>
+                  </div>
+                  <!-- PAN number  -->
+                  <div class="col-lg-6 col-md-6">
+                    <div class="mb-4">
+                      <div class="form-group">
+                        <label for="email">PAN Number</label>
+                            <input
+                                formControlName="pan"
+                                id="pan"
+                                type="text"
+                                class="form-control">
+                            <div *ngIf="f['pan'].touched && f['pan'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['pan'].errors && f['pan'].errors['required']">PAN number is required.</div>
+                                <div *ngIf="f['pan'].errors && f['pan'].errors['pan']">Please, enter PAN number</div>
+                            </div>
+                      </div>  
+                    </div>
+                  </div>
+                  <!-- Designation  -->
+                  <div class="col-lg-6 col-md-6">
+                    <div class="mb-4">
+                      <div class="form-group">
+                        <label for="designation">Designation</label>
+                        <select class="form-select" formControlName="designation">
+                          <option value="1" selected>option1</option>
+                          <option value="2">option2</option>
+                          <option value="3">option3</option>
+                        </select>
+                      </div> 
+                    </div>
+                  </div>
+                  <!-- date-of-birth  -->
+                  <div class="col-lg-6 col-md-6">
+                    <div class="mb-4">
+                      <label for="email">Date of Birth</label>
+                            <input
+                                formControlName="dateofbirth"
+                                id="dateofbirth"
+                                type="date"
+                                class="form-control">
+                            <div *ngIf="f['dateofbirth'].touched && f['dateofbirth'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['dateofbirth'].errors && f['dateofbirth'].errors['required']">Date of bith is required.</div>
+                                <div *ngIf="f['dateofbirth'].errors && f['dateofbirth'].errors['dateofbirth']">Please, enter Date of bith</div>
+                            </div>
+                    </div>
+                  </div>
+                  <!-- material-status  -->
+                  <div class="col-lg-6 col-md-6">
+                    <div class="mb-4">
+                      <div class="form-group">
+                        <label for="materialstatus">Material Status</label>
+                        <select class="form-select" formControlName="materialstatus">
+                          <option value="1" selected>Single</option>
+                          <option value="2">Married</option>
+                          <option value="3">Divoced</option>
+                        </select>
+                        <div *ngIf="f['materialstatus'].touched && f['materialstatus'].invalid" class="alert alert-danger">
+                          <div *ngIf="f['materialstatus'].errors && f['materialstatus'].errors['required']">Field is required.</div>
+                          <div *ngIf="f['materialstatus'].errors && f['materialstatus'].errors['materialstatus']">Please, select the field</div>
+                      </div>
+                      </div> 
+                    </div>
+                  </div>
+                </div>             
+              </div>
+
+              <!-- employement-details  ------------------------------------------------------------->
+              <div class="employement-details">
+                <div class="row mb-4">
+                  <div class="basic-info-tile d-flex align-items-center ">
+                    <i class="bi bi-person-circle me-3 form-title-icon" ></i>
+                    <span class="form-title">Employement Details</span>
+                  </div>
+                </div>
+                <div class="row">                                         
+                  <!-- Designation  -->
+                  <div class="col-lg-6 col-md-6">
+                    <div class="mb-4">
+                      <div class="form-group">
+                        <label for="designation">Designation</label>
+                        <select class="form-select" formControlName="employementdesignation">
+                          <option value="1" selected>option1</option>
+                          <option value="2">option2</option>
+                          <option value="3">option3</option>
+                        </select>
+                      </div> 
+                    </div>
+                  </div>
+                  <!-- pay-cycle  -->
+                  <div class="col-lg-6 col-md-6">
+                    <div class="mb-4">
+                      <div class="form-group">
+                        <label for="paycycle">Pay Cycle</label>
+                        <select class="form-select" formControlName="paycycle">
+                          <option value="1" selected>option1</option>
+                          <option value="2">option2</option>
+                          <option value="3">option3</option>
+                        </select>
+                      </div> 
+                    </div>
+                  </div>
+                  <!-- date-of-joining  -->
+                  <div class="col-lg-6 col-md-6">
+                    <div class="mb-4">
+                      <label for="email">Date of Joining</label>
+                            <input
+                                formControlName="dateofjoining"
+                                id="dateofbirth"
+                                type="date"
+                                class="form-control">
+                            <div *ngIf="f['dateofbirth'].touched && f['dateofbirth'].invalid" class="alert alert-danger">
+                                <div *ngIf="f['dateofbirth'].errors && f['dateofbirth'].errors['required']">Date is required.</div>
+                                <div *ngIf="f['dateofbirth'].errors && f['dateofbirth'].errors['dateofbirth']">Please, enter Date</div>
+                            </div>
+                    </div>
+                  </div>
+                  <!-- compensation  -->
+                  <div class="col-lg-6 col-md-6">
+                    <div class="mb-4">
+                      <div class="form-group">
+                        <label for="name">compensation</label>
+                        <input
+                            formControlName="compensation"
+                            id="name"
+                            type="text"
+                            class="form-control">
+                        <div *ngIf="f['fname'].touched && f['fname'].invalid" class="alert alert-danger">
+                            <div *ngIf="f['compensation'].errors && f['compensation'].errors['']">Name is required.</div>  
+                            <div *ngIf="f['fname'].errors && f['fname'].errors['minlength']">Name should be 3 character.</div>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+                  <!-- supervisor  -->
+                  <div class="col-lg-6 col-md-6">
+                    <div class="mb-4">
+                      <div class="form-group">
+                        <label for="name">supervisor</label>
+                        <input
+                            formControlName="supervisor"
+                            id="name"
+                            type="text"
+                            class="form-control">
+                      </div>
+                    </div>
+                  </div>
+                  <!-- employement type  -->
+                  <div class="col-lg-6 col-md-6">
+                    <div class="mb-4">
+                      <div class="form-group">
+                        <label for="designation">Employement Type</label>
+                        <select class="form-select" formControlName="employementtype">
+                          <option value="1" selected>option1</option>
+                          <option value="2">option2</option>
+                          <option value="3">option3</option>
+                        </select>
+                      </div> 
+                    </div>
+                  </div>
+                </div>             
+              </div>
+              <button class="btn btn-primary mt-4" [disabled]="form.invalid" type="submit">Submit</button>
+            </form>
+        </div>
+      </div>
+    </div>
+</div>
